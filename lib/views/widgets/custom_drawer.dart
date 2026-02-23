@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:respnsive_dash_board/models/drawer_item_model.dart';
 import 'package:respnsive_dash_board/utls/app_images.dart';
 import 'package:respnsive_dash_board/views/widgets/active_and_inactive_drawer_item.dart';
-import 'package:respnsive_dash_board/views/widgets/custom_drawer_item.dart';
 import 'package:respnsive_dash_board/views/widgets/item_drawer_list_view.dart';
 import 'package:respnsive_dash_board/views/widgets/user_info_listtile.dart';
 
