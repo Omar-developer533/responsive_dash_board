@@ -40,7 +40,7 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
       children: List.generate(3, (index) {
         return Expanded(
           child: Padding(
-            padding: const EdgeInsets.only(right: 16.0),
+            padding: EdgeInsets.only(right: index == 2 ? 0 : 16.0),
             child: GestureDetector(
               onTap: () {
                 selectedIndex = index;
