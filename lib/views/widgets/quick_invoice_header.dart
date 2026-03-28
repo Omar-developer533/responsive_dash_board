@@ -1,0 +1,25 @@
+import 'package:flutter/material.dart';
+import 'package:respnsive_dash_board/utls/app_styles.dart';
+
+class QuickInvoiceHeader extends StatelessWidget {
+  const QuickInvoiceHeader({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text('Quick Invoice', style: AppStyles.styleSemiBold20),
+        Container(
+          height: 48,
+          width: 48,
+          decoration: ShapeDecoration(
+            shape: OvalBorder(),
+            color: Color(0xffFAFAFA),
+          ),
+          child: Icon(Icons.add, color: Color(0xff4EB7F2)),
+        ),
+      ],
+    );
+  }
+}
