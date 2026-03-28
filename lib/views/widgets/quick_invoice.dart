@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:respnsive_dash_board/utls/app_images.dart';
 import 'package:respnsive_dash_board/utls/app_styles.dart';
 import 'package:respnsive_dash_board/views/widgets/custom_back_ground_container.dart';
+import 'package:respnsive_dash_board/views/widgets/custom_text_field.dart';
 import 'package:respnsive_dash_board/views/widgets/latestTransection.dart';
+import 'package:respnsive_dash_board/views/widgets/quick_invoice_form.dart';
 import 'package:respnsive_dash_board/views/widgets/quick_invoice_header.dart';
+import 'package:respnsive_dash_board/views/widgets/title_text_fieled.dart';
 import 'package:respnsive_dash_board/views/widgets/user_info_listtile.dart';
 
 class QuickInvoice extends StatelessWidget {
@@ -15,7 +18,11 @@ class QuickInvoice extends StatelessWidget {
       padding: 24,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [QuickInvoiceHeader(), LatestTransaction()],
+        children: [
+          QuickInvoiceHeader(),
+          LatestTransaction(),
+          QuickInvoiceForm(),
+        ],
       ),
     );
   }
