@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:respnsive_dash_board/views/widgets/adaptive_layout_builder.dart';
 import 'package:respnsive_dash_board/views/widgets/dashboard_desktopLayout.dart';
+import 'package:respnsive_dash_board/views/widgets/dashboard_tablit_layout.dart';
 
 class DashBoardView extends StatelessWidget {
   const DashBoardView({super.key});
@@ -14,7 +15,7 @@ class DashBoardView extends StatelessWidget {
           return SizedBox();
         },
         tablitLayout: (context) {
-          return SizedBox();
+          return DashboardTablitLayout();
         },
         desktopLayout: (context) {
           return DashboardDesktoplayout();

@@ -18,7 +18,32 @@ class DashboardDesktoplayout extends StatelessWidget {
         SizedBox(width: 32),
         Expanded(flex: 2, child: AllExpensesAndQuickInvoiceSection()),
         SizedBox(width: 24),
-        Expanded(child: IncomeSection()),
+        Expanded(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(height: 40),
+                MycardAndTransactionHistorySection(),
+                SizedBox(height: 24),
+                IncomeSection(),
+              ],
+            ),
+          ),
+          // child: CustomScrollView(
+          //   slivers: [
+          //     SliverToBoxAdapter(
+          //       child: Column(
+          //         children: [
+          //           SizedBox(height: 40),
+          //           MycardAndTransactionHistorySection(),
+          //           SizedBox(height: 24),
+          //         ],
+          //       ),
+          //     ),
+          //     SliverFillRemaining(child: IncomeSection(), hasScrollBody: false),
+          //   ],
+          // ),
+        ),
       ],
     );
   }
