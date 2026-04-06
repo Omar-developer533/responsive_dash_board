@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:respnsive_dash_board/views/widgets/all_expenses_and_quick_invoice_section.dart';
 
 import 'package:respnsive_dash_board/views/widgets/custom_drawer.dart';
+import 'package:respnsive_dash_board/views/widgets/income_section.dart';
 
-import 'package:respnsive_dash_board/views/widgets/mycard_and_transaction_history.dart';
+import 'package:respnsive_dash_board/views/widgets/mycard_and_transaction_history_section.dart';
 
 class DashboardDesktoplayout extends StatelessWidget {
   const DashboardDesktoplayout({super.key});
@@ -17,7 +18,7 @@ class DashboardDesktoplayout extends StatelessWidget {
         SizedBox(width: 32),
         Expanded(flex: 2, child: AllExpensesAndQuickInvoiceSection()),
         SizedBox(width: 24),
-        Expanded(child: MycardAndTransactionHistory()),
+        Expanded(child: IncomeSection()),
       ],
     );
   }
