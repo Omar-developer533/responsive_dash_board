@@ -1,0 +1,11 @@
+import 'package:flutter/widgets.dart';
+
+class SizeConfig {
+  static const double desktop = 1200;
+  static const double tablet = 800;
+  static late double width, hieght;
+  static init(BuildContext context) {
+    width = MediaQuery.sizeOf(context).width;
+    hieght = MediaQuery.sizeOf(context).height;
+  }
+}
