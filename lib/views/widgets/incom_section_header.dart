@@ -12,7 +12,7 @@ class IncomSectionHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text('Income', style: AppStyles.styleSemiBold20),
+        Text('Income', style: AppStyles.styleSemiBold20(context)),
         Container(
           padding: const EdgeInsets.symmetric(
             vertical: 12,
@@ -24,7 +24,7 @@ class IncomSectionHeader extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Text('Monthly', style: AppStyles.styleMedium16),
+              Text('Monthly', style: AppStyles.styleMedium16(context)),
               SizedBox(width: 16),
               Transform.rotate(
                 angle: -1.57079633,

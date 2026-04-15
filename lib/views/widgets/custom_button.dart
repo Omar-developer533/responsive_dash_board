@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:respnsive_dash_board/utls/app_styles.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, this.backGroundColor, required this.text, this.color});
+  const CustomButton({
+    super.key,
+    this.backGroundColor,
+    required this.text,
+    this.color,
+  });
   final Color? backGroundColor;
   final String text;
   final Color? color;
@@ -21,7 +26,9 @@ class CustomButton extends StatelessWidget {
         onPressed: () {},
         child: Text(
           text,
-          style: AppStyles.styleSemiBold18.copyWith(color:color?? Colors.white),
+          style: AppStyles.styleSemiBold18(
+            context,
+          ).copyWith(color: color ?? Colors.white),
         ),
       ),
     );
