@@ -37,23 +37,64 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: List.generate(3, (index) {
-        return Expanded(
-          child: Padding(
-            padding: EdgeInsets.only(right: index == 2 ? 0 : 16.0),
-            child: GestureDetector(
-              onTap: () {
-                selectedIndex = index;
-                setState(() {});
-              },
-              child: AllExpensesItem(
-                isSelected: selectedIndex == index,
-                allExpensesItemModel: items[index],
-              ),
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              selectedIndex = 0;
+              setState(() {});
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: items[0],
+              isSelected: selectedIndex == 0,
             ),
           ),
-        );
-      }),
+        ),
+        SizedBox(width: 12),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              selectedIndex = 1;
+              setState(() {});
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: items[1],
+              isSelected: selectedIndex == 1,
+            ),
+          ),
+        ),
+        SizedBox(width: 12),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              selectedIndex = 2;
+              setState(() {});
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: items[2],
+              isSelected: selectedIndex == 2,
+            ),
+          ),
+        ),
+      ],
+
+      //  List.generate(3, (index) {
+      //   return Expanded(
+      //     child: Padding(
+      //       padding: EdgeInsets.only(right: index == 2 ? 0 : 16.0),
+      //       child: GestureDetector(
+      //         onTap: () {
+      //           selectedIndex = index;
+      //           setState(() {});
+      //         },
+      //         child: AllExpensesItem(
+      //           isSelected: selectedIndex == index,
+      //           allExpensesItemModel: items[index],
+      //         ),
+      //       ),
+      //     ),
+      //   );
+      // }),
     );
   }
 }

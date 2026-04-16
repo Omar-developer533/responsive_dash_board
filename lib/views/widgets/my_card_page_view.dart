@@ -10,7 +10,13 @@ class MyCardPageView extends StatelessWidget {
     return ExpandablePageView(
       controller: controller,
       scrollDirection: Axis.horizontal,
-      children: List.generate(3, (index) => MyCard()),
+      children: List.generate(
+        3,
+        (index) => Padding(
+          padding: const EdgeInsets.only(right: 5.0),
+          child: MyCard(),
+        ),
+      ),
     );
   }
 }

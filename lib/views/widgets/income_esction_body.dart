@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:respnsive_dash_board/utls/size_config.dart';
 import 'package:respnsive_dash_board/views/widgets/detailed_income_chart.dart';
@@ -10,7 +12,8 @@ class IncomeSectionBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
-    return width >= SizeConfig.desktop && width < 1750
+    // log(width.toString());
+    return width >= SizeConfig.desktop && width < 1485
         ? Expanded(
             child: Padding(
               padding: const EdgeInsets.all(16),

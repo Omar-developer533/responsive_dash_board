@@ -48,40 +48,50 @@ abstract class AppStyles {
     );
   }
 
-  static TextStyle styleMedium16(context){return TextStyle(
-    fontFamily: 'Montserrat',
-    fontSize: getResponsiveFontSize(context,fontSize: 16),
-    color: Color(0xff064061),
-    fontWeight: FontWeight.w500,
-  );}
+  static TextStyle styleMedium16(context) {
+    return TextStyle(
+      fontFamily: 'Montserrat',
+      fontSize: getResponsiveFontSize(context, fontSize: 16),
+      color: Color(0xff064061),
+      fontWeight: FontWeight.w500,
+    );
+  }
 
-  static TextStyle styleRegular14 (context){return TextStyle(
-    fontFamily: 'Montserrat',
-    fontSize: getResponsiveFontSize(context,fontSize: 14),
-    color: Color(0xffAAAAAA),
-    fontWeight: FontWeight.w400,
-  );}
+  static TextStyle styleRegular14(context) {
+    return TextStyle(
+      fontFamily: 'Montserrat',
+      fontSize: getResponsiveFontSize(context, fontSize: 14),
+      color: Color(0xffAAAAAA),
+      fontWeight: FontWeight.w400,
+    );
+  }
 
-  static TextStyle styleSemiBold24 (context){return TextStyle(
-    fontFamily: 'Montserrat',
-    fontSize: getResponsiveFontSize(context,fontSize: 24),
-    color: Color(0xff4EB7F2),
-    fontWeight: FontWeight.w600,
-  );}
+  static TextStyle styleSemiBold24(context) {
+    return TextStyle(
+      fontFamily: 'Montserrat',
+      fontSize: getResponsiveFontSize(context, fontSize: 24),
+      color: Color(0xff4EB7F2),
+      fontWeight: FontWeight.w600,
+    );
+  }
 
-  static TextStyle styleSemiBold18 (context){return TextStyle(
-    fontFamily: 'Montserrat',
-    fontSize: getResponsiveFontSize(context,fontSize: 18),
-    color: Color(0xff4EB7F2),
-    fontWeight: FontWeight.w600,
-  );}
+  static TextStyle styleSemiBold18(context) {
+    return TextStyle(
+      fontFamily: 'Montserrat',
+      fontSize: getResponsiveFontSize(context, fontSize: 18),
+      color: Color(0xff4EB7F2),
+      fontWeight: FontWeight.w600,
+    );
+  }
 
-  static TextStyle styleMedium20 (context){return  TextStyle(
-    fontFamily: 'Montserrat',
-    fontSize: getResponsiveFontSize(context,fontSize: 20),
-    color: Color(0xffFFFFFF),
-    fontWeight: FontWeight.w500,
-  );}
+  static TextStyle styleMedium20(context) {
+    return TextStyle(
+      fontFamily: 'Montserrat',
+      fontSize: getResponsiveFontSize(context, fontSize: 20),
+      color: Color(0xffFFFFFF),
+      fontWeight: FontWeight.w500,
+    );
+  }
 }
 
 double getResponsiveFontSize(context, {required double fontSize}) {
@@ -98,6 +108,7 @@ double getScaleFactor(context) {
   // var devicePixelratio = dispatcher.views.first.devicePixelRatio;
   // var width = phisiclWidth / devicePixelratio;
   double width = MediaQuery.sizeOf(context).width;
+  
   if (width < SizeConfig.tablet) {
     return width / 500;
   } else if (width < SizeConfig.desktop) {
